@@ -1,0 +1,15 @@
+ class Result{
+    public static int sockMerchant(int n, List<Integer> ar) {
+        Collections.sort(ar);
+        int count=0;
+        for(int i=1;i<ar.size();i=i+2){
+            if(ar.get(i)==ar.get(i-1)){
+                count=count+1;
+            }
+            else{
+                i=i-1;
+            }
+        }
+        return count;
+    }
+ }
