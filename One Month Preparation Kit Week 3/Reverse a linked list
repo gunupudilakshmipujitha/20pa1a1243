@@ -1,0 +1,9 @@
+ public static SinglyLinkedListNode reverse(SinglyLinkedListNode llist) {
+       if(llist==null || llist.next==null){
+           return llist;
+       }
+       SinglyLinkedListNode result=reverse(llist.next);
+       llist.next.next=llist;
+       llist.next=null;
+       return result;
+    }
